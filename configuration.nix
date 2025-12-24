@@ -11,10 +11,10 @@
   system.stateVersion = "25.05"; 
 
   environment.systemPackages = with pkgs; [
-    ripgrep
     eza
     lazygit
     oh-my-zsh
+    ripgrep
     starship
     (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
       _7zz = pkgs._7zz-rar;
@@ -32,4 +32,6 @@
   programs.neovim.enable = true;
 
   programs.git.enable = true;
+
+  programs.direnv.enable = true;
 }
