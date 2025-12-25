@@ -8,9 +8,11 @@
     yazi.url = "github:sxyazi/yazi";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs: {
+  outputs = { self, nixpkgs, ... } @ inputs:
+    let
+        system = "x86_64-linux";
+    in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [ 
         inputs.nixos-wsl.nixosModules.default {
@@ -19,6 +21,21 @@
 	}
         ./configuration.nix 
       ];
+    };
+    devShells.${system}.elixir = let
+        pkgs = import nixpkgs { inherit system; };
+    in pkgs.mkShell {
+        packages = with pkgs; [
+            beam28Packages.erlang
+            beam28Packages.elixir_1_19
+            zsh
+        ];
+        shellHook = ''
+            echo "Entering Elixir dev shell"
+            echo "Erlang 'erlang --version'"
+            echo "Elixir 'elixir --version'"
+            exec zsh
+        '';
     };
   };
 }
