@@ -33,7 +33,6 @@
             ];
             shellHook = ''
                 echo "Entering Elixir dev shell"
-                erlang --version
                 elixir --version
             '';
         };
