@@ -10,9 +10,9 @@
 
     system.stateVersion = "25.05"; 
 
-
     environment.systemPackages = with pkgs; [
         eza
+        inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
         oh-my-zsh
         ripgrep
