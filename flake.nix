@@ -11,10 +11,12 @@
   outputs = { self, nixpkgs, ... } @ inputs:
     let
         system = "x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${system};
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [ 
+        system = system;
+        specialArgs = { inherit inputs; };
+        modules = [ 
         inputs.nixos-wsl.nixosModules.default {
           system.stateVersion = "25.05";
 	  wsl.enable = true;
@@ -22,10 +24,9 @@
         ./configuration.nix 
       ];
     };
-    devShells.${system}.elixir = let
-        pkgs = import nixpkgs { inherit system; };
-    in pkgs.mkShell {
+    devShells.${system}.elixir = pkgs.mkShell {
         packages = with pkgs; [
+            git
             beam28Packages.erlang
             beam28Packages.elixir_1_19
             zsh
