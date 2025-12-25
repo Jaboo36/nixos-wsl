@@ -29,7 +29,6 @@
             git
             beam28Packages.erlang
             beam28Packages.elixir_1_19
-            zsh
         ];
         shellHook = ''
             echo "Entering Elixir dev shell"
