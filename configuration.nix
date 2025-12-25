@@ -12,6 +12,7 @@
 
     environment.systemPackages = with pkgs; [
         eza
+        inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
         oh-my-zsh
