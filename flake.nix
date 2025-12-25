@@ -24,18 +24,5 @@
         ./configuration.nix 
       ];
     };
-    devShells.${system} = {
-        elixir = pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-                git
-                beam28Packages.erlang
-                beam28Packages.elixir_1_19
-            ];
-            shellHook = ''
-                echo "Entering Elixir dev shell"
-                elixir --version
-            '';
-        };
-    };
   };
 }
