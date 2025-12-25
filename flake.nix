@@ -35,7 +35,6 @@
             echo "Entering Elixir dev shell"
             echo "Erlang 'erlang --version'"
             echo "Elixir 'elixir --version'"
-            exec zsh
         '';
     };
   };
