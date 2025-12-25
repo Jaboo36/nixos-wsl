@@ -25,7 +25,7 @@
       ];
     };
     devShells.${system}.elixir = pkgs.mkShell {
-        packages = with pkgs; [
+        nativeBuildInputs = with pkgs; [
             git
             beam28Packages.erlang
             beam28Packages.elixir_1_19
