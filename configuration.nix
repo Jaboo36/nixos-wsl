@@ -19,6 +19,7 @@
         lazygit
         oh-my-zsh
         ripgrep
+        rocmPackages.llvm.llvm
         rustc
         starship
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
