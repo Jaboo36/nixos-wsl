@@ -11,17 +11,12 @@
     system.stateVersion = "25.05"; 
 
     environment.systemPackages = with pkgs; [
-        cargo
         eza
         gcc
         inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
-        oh-my-zsh
         ripgrep
-        rocmPackages.llvm.llvm
-        rustc
-        rustPlatform.bindgenHook
         starship
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
@@ -30,9 +25,6 @@
 
     programs.zsh = {
         enable = true;
-        ohMyZsh = {
-        enable = true;
-        };
     };
     users.defaultUserShell = pkgs.zsh;
 
