@@ -18,6 +18,7 @@
         lazygit
         ripgrep
         starship
+        tree-sitter
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
         })
