@@ -16,6 +16,7 @@
         inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
+        lua-language-server
         ripgrep
         starship
         tree-sitter
