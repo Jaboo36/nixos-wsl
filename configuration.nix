@@ -13,6 +13,7 @@
     environment.systemPackages = with pkgs; [
         cargo
         eza
+        gcc
         inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
