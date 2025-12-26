@@ -21,6 +21,7 @@
         ripgrep
         rocmPackages.llvm.llvm
         rustc
+        rustPlatform.bindgenHook
         starship
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
