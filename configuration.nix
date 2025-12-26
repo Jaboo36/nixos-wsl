@@ -11,13 +11,14 @@
     system.stateVersion = "25.05"; 
 
     environment.systemPackages = with pkgs; [
+        cargo
         eza
         inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
         oh-my-zsh
         ripgrep
-        rPackages.treesitter
+        rustc
         starship
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
