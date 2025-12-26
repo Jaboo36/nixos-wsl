@@ -14,6 +14,7 @@
         eza
         gcc
         inotify-tools
+        inputs.expert.packages.${stdenv.hostPlatform.system}.default
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
         lua-language-server
