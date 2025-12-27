@@ -17,9 +17,11 @@
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
         lua-language-server
+        nixd
         ripgrep
         starship
         tree-sitter
+        tree-sitter-grammars.tree-sitter-nix
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
         })
