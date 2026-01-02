@@ -13,6 +13,7 @@
     environment.systemPackages = with pkgs; [
         eza
         gcc
+        inputs.helix.packages.${stdenv.hostPlatform.system}.default
         inotify-tools
         inputs.nix-auth.packages.${stdenv.hostPlatform.system}.default
         lazygit
