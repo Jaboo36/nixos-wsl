@@ -6,6 +6,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixos-wsl.url = "github:nix-community/NixOS-wsl/main";
     nix-auth.url = "github:numtide/nix-auth";
+    helix.url = "github:helix-editor/helix";
     yazi.url = "github:sxyazi/yazi";
   };
 
