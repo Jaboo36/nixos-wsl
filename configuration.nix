@@ -11,6 +11,7 @@
     system.stateVersion = "25.05"; 
 
     environment.systemPackages = with pkgs; [
+        bat
         eza
         gcc
         inputs.helix.packages.${stdenv.hostPlatform.system}.default
