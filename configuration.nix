@@ -27,6 +27,7 @@
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
         })
+        zellij
     ];
 
     programs.zsh = {
