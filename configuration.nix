@@ -27,6 +27,8 @@
         (inputs.yazi.packages.${stdenv.hostPlatform.system}.default.override {
         _7zz = pkgs._7zz-rar;
         })
+        yamlfmt
+        yaml-language-server
         zellij
     ];
 
