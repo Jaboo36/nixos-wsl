@@ -30,6 +30,7 @@
         yamlfmt
         yaml-language-server
         zellij
+        zip
     ];
 
     programs.zsh = {
